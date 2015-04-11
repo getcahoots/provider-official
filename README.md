@@ -1,4 +1,4 @@
-# Cahoots - Provider - Official 
+# Cahoots - Provider - Official [![Build Status](https://travis-ci.org/getcahoots/provider-official.svg?branch=master)](https://travis-ci.org/getcahoots/provider-official)
 
 The official Cahoots provider.
 
