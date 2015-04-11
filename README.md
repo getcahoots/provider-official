@@ -1,4 +1,4 @@
-# Cahoots - Provider - Official
+# Cahoots - Provider - Official 
 
 The official Cahoots provider.
 
@@ -9,7 +9,7 @@ This module provides an API for accessing the community-curated Cahoots data.
 ```js
 var cahootsProvider = require('cahoots-provider-official');
 
-var persons = cahootsProvider('persons'); // or: 'organizations'
+var person = cahootsProvider('person'); // or: 'organizations'
 
 function onFind (err, persons) {
 	if (err) {
@@ -19,7 +19,7 @@ function onFind (err, persons) {
 	console.log(persons[0]);
 }
 
-persons.query({id: 'André König'}, onFind);
+person.query({name: 'André König'}, onFind);
 ```
 
 ## Configuration
