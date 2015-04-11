@@ -19,10 +19,10 @@ var expect = require('expect.js');
 
 var provider = require('..');
 
-describe('The "PersonEntity"', function suite () {
+describe('The "OrganizationEntity"', function suite () {
 
     it('should be able to handle a validation problem on insert', function test (done) {
-        var person = provider('person');
+        var organization = provider('organization');
 
         function onInsert (err) {
             expect(err).not.to.be(null);
@@ -30,27 +30,21 @@ describe('The "PersonEntity"', function suite () {
             done();
         }
 
-        person.insert({}, onInsert);
+        organization.insert({}, onInsert);
     });
 
-    it('should be able to handle the insertion of a valid person', function test (done) {
-        var person = provider('person');
+    it('should be able to handle the insertion of a valid organization', function test (done) {
+        var organization = provider('organization');
 
-        var pers = {
-            name: 'André König',
-            info: 'http://andrekoenig.info',
-            cahoots: [{
-                organization: '1e4328a20169b9dfa1f98d2fb4d1ca1b4542d01a',
-                source: 'http://cahoots.pw',
-                role: 'Software Architect',
-                verified: true
-            }]
+        var org = {
+            name: 'Cahoots',
+            info: 'http://cahoots.pw'
         };
 
-        function onInsert (err, insertedPerson) {
+        function onInsert (err, insertedOrg) {
             expect(err).to.be(null);
 
-            person.query({id: insertedPerson.id}, onQuery);
+            organization.query({id: insertedOrg.id}, onQuery);
         }
 
         function onQuery (err, results) {
@@ -62,7 +56,7 @@ describe('The "PersonEntity"', function suite () {
             done();
         }
 
-        person.insert(pers, onInsert);
+        organization.insert(org, onInsert);
     });
 
 });
