@@ -7,7 +7,7 @@ This module provides an API for accessing the community-curated Cahoots data.
 ## Usage example
 
 ```js
-var cahootsProvider = require('cahoots-provider-official');
+var cahootsProvider = require('@getcahoots/provider-official');
 
 var person = cahootsProvider('person'); // or: 'organizations'
 
@@ -24,6 +24,8 @@ person.query({name: 'André König'}, onFind);
 
 ## Configuration
 
+  * `CAHOOTS_PROVIDER_OFFICIAL_SHEET_KEY`: The sheet key.
+  * `CAHOOTS_PROVIDER_OFFICIAL_SYNC_INTERVAL`: The sync interval in ms. Default `(60 * 1000) * 5` (5min).
   * `CAHOOTS_PROVIDER_OFFICIAL_DATABASE_PATH`: The path to the internal official database.
 
 ## License
