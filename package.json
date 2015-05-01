@@ -1,6 +1,6 @@
 {
   "name": "@getcahoots/provider-official",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "The official Cahoots provider",
   "main": "index.js",
   "scripts": {
